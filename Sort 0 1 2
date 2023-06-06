@@ -1,0 +1,22 @@
+public static void sort012(int[] arr)
+    {
+        //Write your code here
+        int ones=0;
+        int twos =0;
+        int zero=0;
+        int n = arr.length;
+        for(int i : arr){
+            if(i==1) ones++;
+            else if(i==2) twos++;
+            else zero++;
+        }
+        for(int i=0;i<zero;i++){
+            arr[i] = 0;
+        }
+        for(int i =zero;i<zero+ones ;i++){
+            arr[i] = 1;
+        }
+        for(int i =ones+zero;i<n;i++){
+            arr[i] = 2;
+        }
+    }
